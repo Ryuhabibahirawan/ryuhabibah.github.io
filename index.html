@@ -167,21 +167,7 @@ window.Quarto = {
 <section id="package" class="level3" data-number="1.5">
 <h3 data-number="1.5" class="anchored" data-anchor-id="package"><span class="header-section-number">1.5</span> Package</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.5.1     ✔ tibble    3.2.1
-✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-✔ purrr     1.0.2     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(WDI) <span class="co"># tambahkan library lain jika diperlukan</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
@@ -200,6 +186,11 @@ window.Quarto = {
 <section id="data" class="level3" data-number="3.1">
 <h3 data-number="3.1" class="anchored" data-anchor-id="data"><span class="header-section-number">3.1</span> Data</h3>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 37%">
+<col style="width: 29%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Tahun</th>
@@ -286,11 +277,11 @@ window.Quarto = {
 </tbody>
 </table>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:/metopelryu"</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>metopel2<span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"datametopel.xlsx"</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>reg2 <span class="ot">&lt;-</span><span class="fu">lm</span>(<span class="at">data =</span> metopel2,Y<span class="sc">~</span>X)</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(reg2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:/metopelryu"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>metopel2<span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"datametopel.xlsx"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>reg2 <span class="ot">&lt;-</span><span class="fu">lm</span>(<span class="at">data =</span> metopel2,Y<span class="sc">~</span>X)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(reg2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -311,10 +302,10 @@ Residual standard error: 49850000 on 13 degrees of freedom
 Multiple R-squared:  0.2333,    Adjusted R-squared:  0.1743 
 F-statistic: 3.955 on 1 and 13 DF,  p-value: 0.0682</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>metopel2<span class="sc">$</span>m <span class="ot">&lt;-</span><span class="fu">resid</span>(reg2)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(metopel2<span class="sc">$</span>X,metopel2<span class="sc">$</span>m,<span class="at">ylab=</span><span class="st">"error"</span>,<span class="at">col=</span><span class="st">'blue'</span>, <span class="at">pch=</span><span class="dv">16</span>)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>metopel2<span class="sc">$</span>m <span class="ot">&lt;-</span><span class="fu">resid</span>(reg2)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(metopel2<span class="sc">$</span>X,metopel2<span class="sc">$</span>m,<span class="at">ylab=</span><span class="st">"error"</span>,<span class="at">col=</span><span class="st">'blue'</span>, <span class="at">pch=</span><span class="dv">16</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -324,10 +315,10 @@ F-statistic: 3.955 on 1 and 13 DF,  p-value: 0.0682</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>metopel2<span class="sc">$</span>m <span class="ot">&lt;-</span><span class="fu">resid</span>(reg2)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(metopel2<span class="sc">$</span>Y,metopel2<span class="sc">$</span>m,<span class="at">ylab=</span><span class="st">"error"</span>,<span class="at">col=</span><span class="st">'green'</span>, <span class="at">pch=</span><span class="dv">16</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>metopel2<span class="sc">$</span>m <span class="ot">&lt;-</span><span class="fu">resid</span>(reg2)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(metopel2<span class="sc">$</span>Y,metopel2<span class="sc">$</span>m,<span class="at">ylab=</span><span class="st">"error"</span>,<span class="at">col=</span><span class="st">'green'</span>, <span class="at">pch=</span><span class="dv">16</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -355,11 +346,11 @@ y_{t}=\beta_0 + \beta_1 x_t+\mu_t
 <h3 data-number="4.1" class="anchored" data-anchor-id="pembahasan-masalah"><span class="header-section-number">4.1</span> Pembahasan masalah</h3>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 29%">
-<col style="width: 19%">
+<col style="width: 27%">
+<col style="width: 18%">
 <col style="width: 16%">
-<col style="width: 13%">
-<col style="width: 13%">
+<col style="width: 16%">
+<col style="width: 16%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -420,11 +411,11 @@ y_{t}=\beta_0 + \beta_1 x_t+\mu_t
 <section id="analisis-masalah" class="level3" data-number="4.2">
 <h3 data-number="4.2" class="anchored" data-anchor-id="analisis-masalah"><span class="header-section-number">4.2</span> Analisis masalah</h3>
 <p>Hasil regresinya adalah</p>
-<p>Y=131,367,371−10,297X</p>
+<p><strong>Y=131,367,371−10,297X</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>reg2 <span class="ot">&lt;-</span><span class="fu">lm</span>(<span class="at">data =</span> metopel2,Y<span class="sc">~</span>X)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(reg2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>reg2 <span class="ot">&lt;-</span><span class="fu">lm</span>(<span class="at">data =</span> metopel2,Y<span class="sc">~</span>X)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(reg2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -446,7 +437,6 @@ Multiple R-squared:  0.2333,    Adjusted R-squared:  0.1743
 F-statistic: 3.955 on 1 and 13 DF,  p-value: 0.0682</code></pre>
 </div>
 </div>
-<pre><code>Call: lm(formula = Y ~ X, data = metopel2)  Residuals:       Min        1Q    Median        3Q       Max  -58566245 -25591098   1566664  10369872 152032257   Coefficients:              Estimate Std. Error t value Pr(&gt;|t|)   (Intercept) 131367371   60319936   2.178   0.0484 * X              -10297       5177  -1.989   0.0682 . --- Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1  Residual standard error: 49850000 on 13 degrees of freedom Multiple R-squared:  0.2333, Adjusted R-squared:  0.1743  F-statistic: 3.955 on 1 and 13 DF,  p-value: 0.0682</code></pre>
 </section>
 </section>
 <section id="kesimpulan" class="level2" data-number="5">
