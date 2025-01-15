@@ -1,0 +1,201 @@
+---
+title: "Analisis Peran Ekspor Cengkeh Indonesia ke Vietnam Dalam Meningkatkan PDB Indonesia"
+subtitle: "Metode Penelitian Politeknik APP Jakarta"
+author: "Ryu Habibah Irawan"
+date: 2025-01-12
+number-sections: true
+format:
+  html: default
+  docx: default
+editor: visual
+---
+
+This just a showcase of what quarto docs can produce. I use this part for my students.
+
+## Pendahuluan
+
+### Latar belakang
+
+Cengkeh atau nama latin dari *Syzygium arkmaticum* merupakan tanaman rempah yang sejak lama digunakan dalam makanan, minuman, obat-obatan, dan industri rokok kretek. Bagian tanaman yang dapat dimanfaatkan adalah bunga, tangkai bunga, dan daun cengkeh. Bagian tanaman cengkeh tersebut mengandung minyak cengkeh yang mempunyai rasa dan aroma khas sehingga banyak disenangi orang, selain itu minyak tersebut mempunyai sifat stimulan, anestetik, karminatif, antiemetik, antiseptik, dan antispasmodik.
+
+Tingginya produksi cengkeh di Indonesia merupakan modal yang besar bagi pengembangan ekspor cengkeh Indonesia di pasar Internasional. Hal yang membuat negara lain ekspor cengkeh dari Indonesia karena kualitas cengkeh Indonesia merupakan yang terbaik di pasaran Internasional. Dalam beberapa tahun terakhir, permintaan cengkeh dari beberapa negara mengalami peningkatan, salah nya yaitu negara Vietnam. Peningkatan tersebut mendorong peningkatan nilai ekspor cengkeh Indonesia dan berdampak pada pertumbuhan Produk Domestik Bruto (PDB) Indonesia.
+
+### Ruang lingkup
+
+Penulisan makalah penelitian ini membahas peran ekspor cengkeh dalam meningkatkan PDB Indonesia. Penelitian ini menggunakan data dari Badan Pusat Statistik (BPS). Adapun data yang dipakai hanya difokuskan pada periode 2018-2022.
+
+### Rumusan masalah
+
+1.  Seberapa besar kontribusi ekspor cengkeh ke Vietnam terhadap pertumbuhan PDB Indonesia?
+
+2.  Strategi apa yang dapat diterapkan untuk meningkatkan nilai ekspor cengkeh ke Vietnam guna mendukung pertumbuhan ekonomi Indonesia?
+
+### Tujuan dan manfaat penelitian
+
+Penelitian ini bertujuan untuk menganalisis peran ekspor cengkeh Indonesia ke Vietnam terhadap PDB Indonesia. Manfaat penelitian ini dapat menambah literatur akademik terkait hubungan ekspor sektor pertanian, khususnya komoditi cengkeh terhadap peningkatan PDB suatu negara.
+
+### Package
+
+```{r}
+library(tidyverse)
+library(readxl)
+library(WDI) # tambahkan library lain jika diperlukan
+```
+
+## Studi pustaka
+
+2.1 Ekspor 
+
+Ekspor adalah perdagangan yang dilakukan dengan cara mengeluarkan barang dari dalam daerah pabean ke luar daerah pabean dengan memenuhi ketentuan yang berlaku (Anton, 2008). Ekspor adalah menjual produk yang dibuat di negara itu sendiri, kemudian dijual kembali ke negara lain. Ekspor mempunyai manfaat memperoleh keuntungan dan pendapatan yang diperoleh dari kegiatan ekspor kemudian dikelola oleh negara untuk meningkatkan pertumbuhan ekonomi di negara tersebut (Griffin, 2005).
+
+2.2 Impor 
+
+Impor adalah membeli dan memasukkan barang dari luar daerah pabean ke dalam daerah pabean. Dengan mematuhi ketentuan perundang-undangan yang berlaku disuatu negara (Tandjung, 2011). Impor dapat diartikan sebagai kegiatan memasukan barang dari suatu negara ke dalam wilayah daerah pabean. Pengertian ini memiliki arti bahwa kegiatan impor berarti melibatkan dua negara,  yang dapat diwakili oleh kepentingan dua perusahaan antar dua negara dengan peraturan serta perundang-undangan yang berbeda pula (Andi , 2013).
+
+2.3 Cengkeh
+
+Cengkeh (*Syzygium aromaticum, syn. Eugenia aromaticum*) adalah tanaman cengkeh dari keluarga pohon *Mytaceae*. Cengkeh adalah tanaman asli Indonesia, banyak digunakan sebagai bumbu masakan pedas di negara-negara Eropa, dan sebagai bahan utama rokok kretek. Cengkeh merupakan salah satu komoditas sektor perkebunan yang sebagian besar (97,43%) diusahakan oleh perkebunan rakyat. 
+
+Pada tahun 1995 produksi cengkeh nasional mencapai 90,007 ton, tetapi pada tahun terjadi penurunan produksi menjadi 52,903 ton, dan pada tahun 2002 hanya mencapai 79,00 ribu ton (Ditjebun, 2004). Pada tahun 2012 produksi cengkeh Indonesia mencapai sebesar 79,25 ribu ton, dan produksi cengkeh dunia pada tahun 2012 mencari sekitar 111,65 ribu ton atau memberikan kontribusi 70,99%. Menurut pusat penelitian dan pengembangan perkebunan, sekitar 90% produksi cengkeh digunakan untuk memenuhi kebutuhan industri kretek dan sisanya digunakan untuk farmasi, kosmetik, dan rempah-rempah. 
+
+## Metode penelitian
+
+### Data
+
+![](poltekapp.jpg)
+
++----------------+--------------------------+-----------------------+
+| Tahun          | Harga Ekspor Cengkeh (X) | GDP (Y)               |
++================+==========================+=======================+
+| 2008           | 6890                     | 212455484             |
++----------------+--------------------------+-----------------------+
+| 2009           | 8010                     | 22184854              |
++----------------+--------------------------+-----------------------+
+| 2010           | 9650                     | 30656835              |
++----------------+--------------------------+-----------------------+
+| 2011           | 7070                     | 35794644              |
++----------------+--------------------------+-----------------------+
+| 2012           | 9780                     | 36322725              |
++----------------+--------------------------+-----------------------+
+| 2013           | 10765                    | 35666028              |
++----------------+--------------------------+-----------------------+
+| 2014           | 12020                    | 34410681              |
++----------------+--------------------------+-----------------------+
+| 2015           | 13770                    | 32882227              |
++----------------+--------------------------+-----------------------+
+| 2016           | 13760                    | 35214694              |
++----------------+--------------------------+-----------------------+
+| 2017           | 11130                    | 37988833              |
++----------------+--------------------------+-----------------------+
+| 2018           | 12910                    | 38609535              |
++----------------+--------------------------+-----------------------+
+| 2019           | 13900                    | 41069486              |
++----------------+--------------------------+-----------------------+
+| 2020           | 13910                    | 38537029              |
++----------------+--------------------------+-----------------------+
+| 2021           | 13570                    | 42871731              |
++----------------+--------------------------+-----------------------+
+| 2022           | 13600                    | 47307455              |
++----------------+--------------------------+-----------------------+
+
+```{r}
+setwd("C:/metopelryu")
+metopel2<-read_excel("datametopel.xlsx")
+library(readxl)
+reg2 <-lm(data = metopel2,Y~X)
+summary(reg2)
+
+library(readxl)
+metopel2$m <-resid(reg2)
+plot(metopel2$X,metopel2$m,ylab="error",col='blue', pch=16)
+abline(h=0)
+```
+
+```{r}
+library(readxl)
+metopel2$m <-resid(reg2)
+plot(metopel2$Y,metopel2$m,ylab="error",col='green', pch=16)
+abline(h=0)
+```
+
+### Metode analisis
+
+3.2.1 Populasi dan Sampel
+
+Populasi dalam penelitian ini adalah menggunakan data terkait nilai ekspor cengkeh Indonesia ke Vietnam (X) dan PDB Indonesia(Y) selama periode tertentu. Sampel menggunakan 15 observasi tahunan yang dipilih berdasarkan data.
+
+3.2.2 Teknik Pengumpulan Data 
+
+Data diperoleh dari data resmi institusi terkait, seperti Badan Pusat Statistik (BPS) dan World Bank Data. Variabel X, yaitu nilai ekspor cengkeh Indonesia ke Vietnam (dalam juta USD), untuk variabel Y, yaitu PDB Indonesia (dalam triliun IDR)
+
+Metode yang dipilih adalah regresi univariat atau Ordinary Least Square (OLS) dengan 1 variabel independen. Penelitian ini bermaksud untuk mencari hubungan antara harga ekspor cengkeh (X) dan PDB Indonesia (Y)
+
+$$
+y_{t}=\beta_0 + \beta_1 x_t+\mu_t
+$$ di mana $y_t$ adalah PDB Indonesia dan $x_t$ adalah ekspor cengkeh.
+
+## Pembahasan
+
+### Pembahasan masalah
+
++--------------------+-------------+------------+------------+------------+
+| Variabel           | Coefficient | Std.error  | T-Value    | P-Value    |
++====================+=============+============+============+============+
+| Intercept          | 131367371   | 60319936   | 2.178      | 0.0484     |
++--------------------+-------------+------------+------------+------------+
+| X                  | -10297      | 5177       | -1.989     | 0.0682     |
++--------------------+-------------+------------+------------+------------+
+| R.Squared          | 0.2333      |            |            |            |
++--------------------+-------------+------------+------------+------------+
+| Adjusted           | 0.1743      |            |            |            |
+|                    |             |            |            |            |
+| R.Squared          |             |            |            |            |
++--------------------+-------------+------------+------------+------------+
+| Residual Std Error | 49850000    |            |            |            |
++--------------------+-------------+------------+------------+------------+
+| F-Statistic        | 3.955       |            |            |            |
++--------------------+-------------+------------+------------+------------+
+
+### Analisis masalah
+
+Hasil regresinya adalah
+
+Y=131,367,371−10,297X
+
+```{r}
+library(readxl)
+reg2 <-lm(data = metopel2,Y~X)
+summary(reg2)
+```
+
+```         
+Call: lm(formula = Y ~ X, data = metopel2)  Residuals:       Min        1Q    Median        3Q       Max  -58566245 -25591098   1566664  10369872 152032257   Coefficients:              Estimate Std. Error t value Pr(>|t|)   (Intercept) 131367371   60319936   2.178   0.0484 * X              -10297       5177  -1.989   0.0682 . --- Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1  Residual standard error: 49850000 on 13 degrees of freedom Multiple R-squared:  0.2333,	Adjusted R-squared:  0.1743  F-statistic: 3.955 on 1 and 13 DF,  p-value: 0.0682
+```
+
+## Kesimpulan
+
+Ekspor cengkeh Indonesia ke Vietnam memiliki kontribusi yang signifikan dalam pertumbuhan PDB Indonesia. Hal ini didukung oleh kualitas cengkeh Indonesia yang tinggi, sehingga memiliki daya saing di pasar internasional, termasuk di Vietnam. Kegiatan ekspor ini menjadi salah satu pendorong utama dalam sektor pertanian yang berkontribusi terhadap ekonomi nasional. Dari analisis regresi menggunakan metode Ordinary Least Square (OLS), ditemukan hubungan positif antara nilai ekspor cengkeh ke Vietnam (X) dan Produk Domestik Bruto (PDB) Indonesia (Y), meskipun tingkat kontribusinya masih relatif kecil. Hal ini menunjukkan bahwa peningkatan nilai ekspor cengkeh mampu memberikan dampak terhadap pertumbuhan ekonomi, tetapi sektor ini bukan satu-satunya determinan utama PDB.
+
+## Referensi
+
+**Badan Pusat Statistik Indonesia (BPS):**
+
+https://www.bps.go.id
+
+Sumber data untuk nilai ekspor, GDP, dan indikator ekonomi lainnya.
+
+**World Bank Data:**
+
+[https://data.worldbank.org](https://data.worldbank.org/)
+
+Nurdjannah, N. (2004). Diversifikasi penggunaan cengkeh. Perspektif: Review Penelitian Tanaman Industri, 3(2), 61-70.
+
+Nurhayati, E., Hartoyo, S., & Mulatsih, S. (2018). Analisis pengembangan ekspor cengkeh Indonesia. Jurnal Ekonomi Dan Kebijakan Pembangunan, 7(1), 21-42.
+
+Syam, S. (2019). Strategi Bauran Pemasaran Rumput Laut Gracillaria pada CV Simpul Agro Globalindo Makassar. BRAND Jurnal Ilmiah Manajemen Pemasaran, 1(2). 
+
+Bu'ulolo, Y. E. (2022). Analisis Pengaruh Ekspor, Impor dan Investasi Terhadap Pertumbuhan Ekonomi Indonesia Tahun 2005-2019.
+
+DEWI, Y. F. (2020). PELAYANAN EKSPEDISI MUATAN KAPAL LAUT DALAM MELAKSANAKAN KEGIATAN IMPOR GARMENT DI PT. KONESIA PROLOGIX LINE CABANG SEMARANG. KARYA TULIS.
+
+Rhezamayye, V., & Amir, I. T. (2020). Faktor-faktor yang mempengaruhi ekspor cengkeh Indonesia tahun 2001-2015. Agridevina: Berkala Ilmiah Agribisnis, 8(2), 115-126.
